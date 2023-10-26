@@ -39,16 +39,16 @@
 # # # and all those 5 numbers as separate free arguments as well.
 # # # Multiply all those numbers with with the num_sum you calculated in a list data structure.
 
-# # from typing import List
+from typing import List
 
-# # def multiplying_with_the_sum(num_sum: float, *args: float) -> List[float]:
-# #     list_of_multiplications = [num * num_sum for num in args]
-# #     return list_of_multiplications
-# # nums_from_user = input("\nPlease provide me with 5 random digits separated by commas: ")
-# # num_list = [float(num) for num in nums_from_user.split(',')]
-# # sum_of_numbers = sum(num_list)
+def multiplying_with_the_sum(num_sum: float, *args: float) -> List[float]:
+    list_of_multiplications = [num * num_sum for num in args]
+    return list_of_multiplications
+nums_from_user = input("\nPlease provide me with 5 random digits separated by commas: ")
+num_list = [float(num) for num in nums_from_user.split(',')]
+sum_of_numbers = sum(num_list)
 
-# # print(f"\nThis is a list that gets made after we multiply every your given number with the sum of all the numbers you have provided: {multiplying_with_the_sum(sum_of_numbers, *num_list)}")
+print(f"\nThis is a list that gets made after we multiply every your given number with the sum of all the numbers you have provided: {multiplying_with_the_sum(sum_of_numbers, *num_list)}")
 
 
 # # # 3) Create lamba functions for these caclulations:
@@ -99,3 +99,4 @@ def war_of_nums(list_of_numbers: List[int]) -> int:
     sum_of_odds = sum([num for num in list_of_numbers if num%2==1])
     return sum_of_evens - sum_of_odds
 print(war_of_nums(list_of_nums))
+
